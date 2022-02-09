@@ -22,3 +22,5 @@ const objeto = {
 
 const semDefinição = undefined;
 
+// Operador Not
+console.log(!true)

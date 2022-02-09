@@ -16,3 +16,36 @@ const catalago = [
     emCartaz: false,
   },
 ];
+
+const novoFilme = {
+  codigo: 3,
+  titulo: 'Homem-Aranha: Sem Volta para Casa',
+  duracao: 150,
+  atores: ['Tom Holland', 'Zendaya', ' Benedict Cumberbatch'],
+  lancamento: 2021,
+  emCartaz: true,
+};
+
+function adicionaFilme(filme) {
+  catalago.push(filme)
+}
+
+adicionaFilme(novoFilme)
+
+// console.log(catalago)
+
+function procuraFilmePeloCodigo(id) {
+  return catalago.find((filme) => filme.codigo === id);
+}
+
+// console.log(procuraFilmePeloCodigo(3))
+
+//Desafio reescreva essa função utilizando a função anterior.
+function modificaStatusEmCartaz(id) {
+  const auxiliar = catalago.find((filme) => filme.codigo === id);
+  auxiliar.emCartaz = !auxiliar.emCartaz
+}
+
+modificaStatusEmCartaz(1)
+
+console.log(catalago)
