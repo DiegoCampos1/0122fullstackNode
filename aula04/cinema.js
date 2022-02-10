@@ -16,23 +16,26 @@ const catalago = [
     emCartaz: false,
   },
 ];
+// console.log(JSON.stringify(catalago))
 
-const novoFilme = {
-  codigo: 3,
-  titulo: 'Homem-Aranha: Sem Volta para Casa',
-  duracao: 150,
-  atores: ['Tom Holland', 'Zendaya', ' Benedict Cumberbatch'],
-  lancamento: 2021,
-  emCartaz: true,
-};
 
-function adicionaFilme(filme) {
-  catalago.push(filme)
-}
 
-adicionaFilme(novoFilme)
+// const novoFilme = {
+//   codigo: 3,
+//   titulo: 'Homem-Aranha: Sem Volta para Casa',
+//   duracao: 150,
+//   atores: ['Tom Holland', 'Zendaya', ' Benedict Cumberbatch'],
+//   lancamento: 2021,
+//   emCartaz: true,
+// };
 
-// console.log(catalago)
+// function adicionaFilme(filme) {
+//   catalago.push(filme);
+// }
+
+// adicionaFilme(novoFilme);
+
+// // console.log(catalago)
 
 function procuraFilmePeloCodigo(id) {
   return catalago.find((filme) => filme.codigo === id);
@@ -40,12 +43,12 @@ function procuraFilmePeloCodigo(id) {
 
 // console.log(procuraFilmePeloCodigo(3))
 
-//Desafio reescreva essa função utilizando a função anterior.
+//Desafio reescreva essa função utilizando a função anterior "procuraFilmePeloCodigo".
 function modificaStatusEmCartaz(id) {
-  const auxiliar = catalago.find((filme) => filme.codigo === id);
-  auxiliar.emCartaz = !auxiliar.emCartaz
+  const auxiliar = procuraFilmePeloCodigo(id)
+  auxiliar.emCartaz = !auxiliar.emCartaz;
 }
 
-modificaStatusEmCartaz(1)
+modificaStatusEmCartaz(1);
 
-console.log(catalago)
+console.log(catalago);
