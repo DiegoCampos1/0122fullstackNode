@@ -1,5 +1,6 @@
 // 01 - Função para buscar e imprimir o nome completo de todos os estudantes que estudam no turno da manhã.
 // 02 - Função para buscar um estudante pelo nome e imprimir a situação dele em cada materia.
+// >= 60 aprovado se nao reprovado
 const estudantes = [
   {
     nome: 'Jorge',
@@ -74,3 +75,34 @@ const estudantes = [
     ],
   },
 ];
+
+// 01 - Nome completo de todos os estudantes que estudam no turno da manhã.
+
+const retornaNomeCompletoManha = (arrayDeEstudantes) => {
+  const estudanteManha = arrayDeEstudantes.filter(
+    (estudante) => estudante.turno === 'Manhã'
+  );
+  console.log(
+    estudanteManha.map(
+      (estudante) => `${estudante.nome}  ${estudante.sobrenome}`
+    )
+  );
+};
+
+// retornaNomeCompletoManha(estudantes)
+
+// 02 - Função para buscar um estudante pelo nome e imprimir a situação dele em cada materia.
+
+const retornaSituacaoEstudante = (arrayDeEstudante, name) => {
+  const filtraPelaNome = arrayDeEstudante.find(
+    (estudante) => estudante.nome === name
+  );
+  console.log(
+    filtraPelaNome.materias.map(
+      (materia) =>
+        `${materia.name} ${materia.nota >= 60 ? 'Aprovado' : 'Reprovado'}`
+    )
+  );
+};
+
+retornaSituacaoEstudante(estudantes, 'Natalia');
