@@ -1,0 +1,10 @@
+html {
+  height: 403px;
+  width: 100%;
+}
+
+body {
+  background: url(images/cat.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
