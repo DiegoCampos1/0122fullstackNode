@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 80px;
+  color: red;
+}
+
+.div-mae {
+  width: 100vw;
+  background-color: green;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 70vh;
+}
+
+.div-filha {
+  background-color: blue;
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
+
+}
+
+.div-neta {
+  background-color: brown;
+  height: 100%;
+  box-sizing: border-box;
+
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+    color: blue;
+  }
+  body {
+    background: aquamarine;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px){
+  h1 {
+    font-size: 40px;
+    color: purple;
+  }
+  body {
+    background: grey;
+  }
+}
