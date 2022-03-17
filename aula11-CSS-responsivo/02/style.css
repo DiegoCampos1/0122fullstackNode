@@ -66,3 +66,32 @@ p strong {
   background-color: #41197f;
 }
 
+@media (min-width: 500px) {
+  .card-1 {
+    display: block;
+  }
+}
+
+@media (min-width: 600px ) and (max-width: 1000px) {
+  .card-2 {
+    display: block;
+  }
+}
+
+@media (max-width: 650px) {
+  .card-3{
+    display: block;
+  }
+}
+
+@media (min-width: 950px) {
+  .card-3 {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  p.trick {
+    color: black;
+  }
+}
