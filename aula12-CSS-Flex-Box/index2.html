@@ -10,17 +10,41 @@
         background-color: rgb(243, 243, 243);
         border: 2px solid #232525;
         font-size: 50px;
-        height: 100px;
         margin: 10px 5px;
         text-align: center;
         width: 10%;
       }
 
-      .box-container {
-        background-color: #0fa36b;
+      .box-1 {
+        height: 80px;
+        align-self: end;
       }
 
-      .box-5 {
+      .box-container {
+        background-color: #0fa36b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+      }
+
+      .box-2 {
+        height: 90px;
+
+      }
+      .box-3 {
+        height: 60px;
+
+      }
+      .box-4 {
+        height: 75px;
+
+      }
+      .box-5:hover {
+        height: 100px;
+        flex-grow: 0.3;
+        border: 30px solid purple;
       }
 
     </style>
@@ -28,10 +52,10 @@
   </head>
   <body>
     <div class="box-container">
-      <div class="box">1</div>
-      <div class="box">2</div>
-      <div class="box">3</div>
-      <div class="box">4</div>
+      <div class="box box-1">1</div>
+      <div class="box box-2">2</div>
+      <div class="box box-3">3</div>
+      <div class="box box-4">4</div>
       <div class="box box-5">5</div>
     </div>
   </body>
